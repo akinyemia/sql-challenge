@@ -69,3 +69,45 @@ departments
 #format d001
 dept_no PK string
 dept_name string
+
+
+-----------------------------------------------
+
+
+create table Employees (
+	emp_no INT, 
+	emp_title VARCHAR,
+	birthdate DATE,
+	first_name VARCHAR, 
+	last_name VARCHAR, 
+	sex VARCHAR, 
+	hire_date DATE
+);
+
+
+create table Titles (
+	title_id VARCHAR PRIMARY KEY, 
+	title VARCHAR
+);
+
+create table Dept_manager (
+	dept_no VARCHAR PRIMARY KEY, 
+	emp_no INT
+);
+
+create table Salaries (
+	emp_no INT PRIMARY KEY, 
+	salary INT
+);
+
+create table Departments (
+	dept_no VARCHAR PRIMARY KEY, 
+	dept_name VARCHAR
+);
+
+create table Dept_emp (
+	emp_no INT PRIMARY KEY, 
+	dept_no VARCHAR
+);
+
+----------------------------------------------
