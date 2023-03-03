@@ -28,17 +28,16 @@ departments:
 dept_no
 dept_name
 
-
+--------------------------------------------------------
 
 Titles
 ------ 
-#format s0001 
-title_id PK string 
+title_id PK string
 tite string
 
 salaries
 ------
-emp_no PK int FK >- employee.emp_no
+emp_no int FK >- employee.emp_no
 salary int
 
 employee
@@ -53,20 +52,17 @@ hire_date date
 
 dept_manager
 ------
-#format d001
-dept_no PK string
+dept_no string FK >- departments.dept_no
 emp_no int FK >- employee.emp_no
 
 
 dept_emp
 ------
-emp_no PK int FK >- employee.emp_no
- #format d001
+emp_no int FK >- employee.emp_no
 dept_no string FK >- departments.dept_no
 
 departments
 ------
-#format d001
 dept_no PK string
 dept_name string
 
